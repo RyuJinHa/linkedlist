@@ -55,21 +55,25 @@ void genList(void){
 	return;
 }
 
-void print_list(void){
+void print_node(int n){
 	
 	linknode_t *ndPtr;
-	
-	if(list->next==NULL)
-	{
-		return;
-	}
-	
+	int i=0;
 	ndPtr=list->next;
+		
 	while(ndPtr!=NULL){
-		printf("%d ", ndPtr->data);
+		i++;
+		if(i==n)
+		{
+			printf("%i-th value : %i\n", i, ndPtr->data );
+			break;
+		}
 		ndPtr=ndPtr->next;
 	}
+	
 }
+
+
 
 
 
