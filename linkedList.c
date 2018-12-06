@@ -25,5 +25,25 @@ linknode_t* create_node(int value){
 	ndPtr->next= NULL; 
 	
 	return ndPtr;
+}
+
+void addTail(int value)
+{
+	linknode_t *ndPtr, *newPtr;
 	
+	if(list==NULL)
+	{
+		return;
+	}
+	else
+	{
+		ndPtr=list;
+		while(ndPtr->next!=NULL)
+		{
+			ndPtr=ndPtr->next;
+		}
+		
+		newPtr=create_node(value);
+		ndPtr->next=newPtr;
+	}
 }
