@@ -47,3 +47,30 @@ void addTail(int value)
 		ndPtr->next=newPtr;
 	}
 }
+
+void genList(void){
+	
+	list=create_node(0);
+	
+	return;
+}
+
+void print_list(void){
+	
+	linknode_t *ndPtr;
+	
+	if(list->next==NULL)
+	{
+		return;
+	}
+	
+	ndPtr=list->next;
+	while(ndPtr!=NULL){
+		printf("%d ", ndPtr->data);
+		ndPtr=ndPtr->next;
+	}
+}
+
+
+
+
